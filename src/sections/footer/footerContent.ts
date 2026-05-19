@@ -11,21 +11,15 @@ export const footerOffices = [
 
 export const footerPagesLinks = [
   { label: 'Home', href: '/' },
-  { label: 'Home (Vertical)', href: '/' },
   { label: 'Services', href: '/' },
-  { label: 'Services (Vertical)', href: '/' },
   { label: 'About', href: '/' },
-  { label: 'About (Vertical)', href: '/' },
   { label: 'Contact', href: '/' },
 ] as const
 
 export const footerCmsLinks = [
   { label: 'Projects', href: '/' },
-  { label: 'Project (Vertical)', href: '/' },
   { label: 'Project Single', href: '/' },
-  { label: 'Project Single (Vertical)', href: '/' },
   { label: 'News', href: '/' },
-  { label: 'News (Vertical)', href: '/' },
   { label: 'News Single', href: '/' },
   { label: 'Shop', href: '/' },
 ] as const
