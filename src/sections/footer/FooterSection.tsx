@@ -47,7 +47,7 @@ export function FooterSection() {
               </a>
             </FooterNavColumn>
             <FooterNavColumn title="CMS" links={footerCmsLinks} />
-            <FooterNavColumn title="Utility" links={footerUtilityLinks} />
+            <FooterNavColumn title="Utility Pages" links={footerUtilityLinks} />
           </div>
         </nav>
       </div>

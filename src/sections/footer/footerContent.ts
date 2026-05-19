@@ -21,12 +21,11 @@ export const footerCmsLinks = [
   { label: 'Project Single', href: '/' },
   { label: 'News', href: '/' },
   { label: 'News Single', href: '/' },
-  { label: 'Shop', href: '/' },
 ] as const
 
 export const footerUtilityLinks = [
   { label: '404 Error Page', href: '/' },
-  { label: 'Password Page', href: '/' },
+  { label: 'Password', href: '/' },
   { label: 'Styleguide', href: '/' },
   { label: 'Licensing', href: '/' },
   { label: 'Changelog', href: '/' },
