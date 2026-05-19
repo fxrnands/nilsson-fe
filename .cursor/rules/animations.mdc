@@ -1,0 +1,17 @@
+---
+description: Framer Motion conventions
+globs: src/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Animation Guidelines
+
+- Prefer `transform` and `opacity` for 60fps motion
+- Gate animations when `prefers-reduced-motion: reduce`
+- Shared variants/easing live in `src/lib/` once defined
+- Horizontal scroll: coordinate motion with scroll axis (x), not only y
+
+## Avoid
+
+- Animating layout properties (`width`, `height`, `top`, `left`) on large panels
+- Adding motion libraries beyond Framer Motion unless explicitly requested

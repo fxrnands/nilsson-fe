@@ -1,0 +1,13 @@
+---
+description: Tailwind v4 styling conventions
+globs: src/**/*.{tsx,css}
+alwaysApply: false
+---
+
+# Tailwind v4
+
+- Global styles: `src/index.css` with `@import 'tailwindcss'`
+- Fonts (self-hosted in `public/fonts/`):
+  - `font-general` — General Sans (400 Regular, 500 Medium)
+  - `font-satoshi` — Satoshi Regular
+- Nav links: `.nav-link` — 13px, medium, 0.5px tracking, uppercase, 12px padding

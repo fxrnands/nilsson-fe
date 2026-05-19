@@ -1,0 +1,34 @@
+---
+description: Core stack and architecture for Nilsson SPA
+alwaysApply: true
+---
+
+# Nilsson SPA
+
+## Stack
+
+- React 19 + Vite 8 + TypeScript (strict)
+- Tailwind CSS v4 via `@tailwindcss/vite`
+- Framer Motion 12 for UI motion
+
+## Layout direction
+
+- **Horizontal scroll experience** — design TBD; do not assume vertical section stacking
+- Add design tokens/fonts only when provided by the design spec
+
+## Structure (planned)
+
+```
+src/
+  components/
+  sections/
+  hooks/
+  lib/
+```
+
+## Conventions
+
+- Path alias: `@/` → `src/`
+- Respect `prefers-reduced-motion`
+- Keep bundle lean; lazy-load heavy libs when needed
+- No `console.log` in production code; no `any` types

@@ -1,0 +1,17 @@
+---
+description: Horizontal scroll and hero layout conventions
+globs: src/**/*.{ts,tsx,css}
+alwaysApply: false
+---
+
+# Horizontal scroll
+
+- **Lenis** via `ReactLenis` in `HorizontalScroll` — `orientation: 'horizontal'`, `gestureOrientation: 'vertical'`
+- Track: `flex h-full w-max`; each panel: `min-w-[100vw] flex-[0_0_100vw]`
+- No scroll-snap; smooth wheel via Lenis `lerp` / `smoothWheel`
+
+# Hero panel
+
+- Full-bleed image frame: sharp TL, TR, BL; only `borderBottomRightRadius` uses `HERO_FRAME_RADIUS` (32px)
+- Bottom gradient for headline contrast
+- Headline bottom-left; description box bottom-right with `borderTopLeftRadius: 40`
