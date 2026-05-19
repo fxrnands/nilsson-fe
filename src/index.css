@@ -1,0 +1,143 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/GeneralSans-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/GeneralSans-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-general: 'General Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-satoshi: 'Satoshi', ui-sans-serif, system-ui, sans-serif;
+  --radius-card: 40px;
+  --spacing-card-overlap: var(--radius-card);
+  --radius-nav: 12px;
+  --spacing-hero-inset: 64px;
+  --width-intro-section: 792px;
+  --width-offering-panel: 400px;
+  --width-architecture-panel: 500px;
+  --size-services-card: calc(100svh - 128px);
+  --height-services-card: calc(100svh - 128px);
+  --width-offering-column: min(
+    800px,
+    calc(((100svh - 128px) - 32px) / 2 * 800 / 460)
+  );
+  --spacing-offering-section-end: 66px;
+  --spacing-selected-work-x: 96px;
+  --spacing-footer-x: 120px;
+  --width-footer-cta-button: 260px;
+  --height-footer-cta-button: 79px;
+  --radius-footer-cta: 16px;
+  --width-project-panel-text: 504px;
+  --width-project-panel: calc(var(--width-project-panel-text) + 96px);
+  --color-project-title: #f5f3ef;
+  --color-ink: #111111;
+  --color-footer-address: #8d8d8d;
+  --width-news-intro: 592px;
+  --height-news-card: calc(((100svh - 128px) / 2) * 0.96);
+  --width-news-card: calc(var(--height-news-card) * 800 / 500);
+  /* separator + intro + gap-12 + 2 cards + gap-8 + pr-12 */
+  --width-news-section: calc(
+    1px + var(--width-news-intro) + 3rem + 2 * var(--width-news-card) + 2rem + 3rem
+  );
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body,
+  #root {
+    @apply min-h-full w-full overflow-x-hidden overflow-y-auto;
+  }
+
+  html {
+    @apply bg-white antialiased;
+  }
+
+  body {
+    @apply m-0 font-general text-neutral-950;
+  }
+
+  @media (min-width: 1024px) {
+    html,
+    body,
+    #root {
+      @apply h-full overflow-hidden;
+    }
+  }
+}
+
+@layer components {
+  /* Hero + Interior: white panel at bottom-right, rounded top-left */
+  .card-sticky-corners--bottom-right .card-sticky-corner--primary {
+    top: -40px;
+    right: 0;
+    transform: rotate(0deg);
+    transform-origin: bottom right;
+  }
+
+  .card-sticky-corners--bottom-right .card-sticky-corner--secondary {
+    bottom: 0;
+    left: -40px;
+    transform: rotate(0deg);
+    transform-origin: bottom right;
+  }
+
+  /* Services Architecture: white panel at top-right, rounded bottom-left */
+  .card-sticky-corners--top-right .card-sticky-corner--primary {
+    top: auto;
+    bottom: 0;
+    right: 0;
+    transform: rotate(-90deg);
+    transform-origin: bottom right;
+  }
+
+  .card-sticky-corners--top-right .card-sticky-corner--secondary {
+    top: -40px;
+    bottom: auto;
+    left: -40px;
+    transform: rotate(-90deg);
+    transform-origin: bottom right;
+  }
+
+  /* Exterior: white panel at bottom-left, rounded top-right */
+  .card-sticky-corners--bottom-left .card-sticky-corner--primary {
+    top: -40px;
+    left: -40px;
+    transform: scaleX(-1);
+    transform-origin: top right;
+  }
+
+  .card-sticky-corners--bottom-left .card-sticky-corner--secondary {
+    top: auto;
+    bottom: 0;
+    right: -80px;
+    left: auto;
+    transform: scaleX(-1);
+    transform-origin: top left;
+  }
+}
+
