@@ -88,6 +88,12 @@
       @apply h-full overflow-hidden;
     }
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
 }
 
 @layer components {
