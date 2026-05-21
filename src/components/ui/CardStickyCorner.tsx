@@ -13,7 +13,7 @@ interface CardStickyCornerProps {
 function CardStickyCorner({ part }: CardStickyCornerProps) {
   return (
     <div
-      className={`card-sticky-corner card-sticky-corner--${part} pointer-events-none absolute size-10`}
+      className={`card-sticky-corner card-sticky-corner--${part} pointer-events-none absolute`}
       aria-hidden
     >
       <svg

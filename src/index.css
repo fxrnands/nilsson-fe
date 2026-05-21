@@ -50,7 +50,41 @@
   --width-project-panel: calc(var(--width-project-panel-text) + 96px);
   --color-project-title: #f5f3ef;
   --color-ink: #111111;
+  --color-pill-surface: #f8f8f8;
   --color-footer-address: #8d8d8d;
+  --text-pill-mobile: 12px;
+  --text-caption: 13px;
+  --text-address-sm: 14px;
+  --text-credits-mobile: 11px;
+  --text-news-card-mobile: 16px;
+  --text-news-overlay: 14px;
+  --text-body-sm: 16px;
+  --text-body: 18px;
+  --text-body-lg: 20px;
+  --text-title-md: 24px;
+  --text-section-mobile: 32px;
+  --text-section-sm: 40px;
+  --text-section: 48px;
+  --text-display-sm: 56px;
+  --text-hero-mobile: 44px;
+  --text-hero-sm: 56px;
+  --text-hero-desktop: 140px;
+  --text-services-mobile: 48px;
+  --text-services-sm: 56px;
+  --text-services-desktop: 96px;
+  --text-project-mobile: 40px;
+  --text-project-sm: 48px;
+  --text-project-desktop: 128px;
+  --text-footer-cta-mobile: 44px;
+  --text-footer-cta-desktop: 128px;
+  --text-news-section-mobile: 48px;
+  --text-news-section-desktop: 96px;
+  --text-cta-mobile: 13px;
+  --text-cta-desktop: 24px;
+  --tracking-hero-tight: -1.5px;
+  --tracking-hero-desktop: -4px;
+  --tracking-display: -2px;
+  --size-radius-card: var(--radius-card);
   --width-news-intro: 592px;
   --height-news-card: calc(((100svh - 128px) / 2) * 0.96);
   --width-news-card: calc(var(--height-news-card) * 800 / 500);
@@ -98,8 +132,13 @@
 
 @layer components {
   /* Hero + Interior: white panel at bottom-right, rounded top-left */
+  .card-sticky-corner {
+    width: var(--radius-card);
+    height: var(--radius-card);
+  }
+
   .card-sticky-corners--bottom-right .card-sticky-corner--primary {
-    top: -40px;
+    top: calc(-1 * var(--radius-card));
     right: 0;
     transform: rotate(0deg);
     transform-origin: bottom right;
@@ -107,7 +146,7 @@
 
   .card-sticky-corners--bottom-right .card-sticky-corner--secondary {
     bottom: 0;
-    left: -40px;
+    left: calc(-1 * var(--radius-card));
     transform: rotate(0deg);
     transform-origin: bottom right;
   }
@@ -122,17 +161,17 @@
   }
 
   .card-sticky-corners--top-right .card-sticky-corner--secondary {
-    top: -40px;
+    top: calc(-1 * var(--radius-card));
     bottom: auto;
-    left: -40px;
+    left: calc(-1 * var(--radius-card));
     transform: rotate(-90deg);
     transform-origin: bottom right;
   }
 
   /* Exterior: white panel at bottom-left, rounded top-right */
   .card-sticky-corners--bottom-left .card-sticky-corner--primary {
-    top: -40px;
-    left: -40px;
+    top: calc(-1 * var(--radius-card));
+    left: calc(-1 * var(--radius-card));
     transform: scaleX(-1);
     transform-origin: top right;
   }
@@ -140,7 +179,7 @@
   .card-sticky-corners--bottom-left .card-sticky-corner--secondary {
     top: auto;
     bottom: 0;
-    right: -80px;
+    right: calc(-2 * var(--radius-card));
     left: auto;
     transform: scaleX(-1);
     transform-origin: top left;
