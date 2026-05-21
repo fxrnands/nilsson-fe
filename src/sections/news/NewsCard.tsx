@@ -24,8 +24,8 @@ export function NewsCard({ title, imageSrc, imageAlt, href }: NewsCardProps) {
         />
       </a>
 
-      <div className="flex flex-col items-start gap-3 lg:hidden">
-        <h3 className="font-general text-[20px] font-medium leading-[1.3] tracking-normal text-neutral-950">
+      <div className="flex flex-col items-start gap-3 lg:hidden" data-testid="news-card-mobile">
+        <h3 className="font-general text-[16px] font-medium leading-[1.3] tracking-normal text-neutral-950">
           {title}
         </h3>
         <UnderlinedCaptionLink href={href}>Read article</UnderlinedCaptionLink>
