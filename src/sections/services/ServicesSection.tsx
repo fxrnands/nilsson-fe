@@ -13,7 +13,8 @@ export function ServicesSection() {
           draggable={false}
         />
 
-        <ImageBottomGradient />
+        <ImageBottomGradient placement="top" className="lg:hidden" />
+        <ImageBottomGradient className="max-lg:hidden" />
 
         <div className="hidden lg:block">
           <ServicesArchitecturePanel />
@@ -21,7 +22,7 @@ export function ServicesSection() {
 
         <p
           id="services-heading"
-          className="pointer-events-none absolute top-6 left-6 z-10 font-general text-[48px] leading-none font-normal tracking-normal text-white uppercase sm:top-8 sm:left-8 sm:text-[56px] lg:top-auto lg:bottom-[5%] lg:left-[8%] lg:text-[96px] lg:whitespace-nowrap"
+          className="pointer-events-none absolute top-3 left-3 z-10 font-general text-[48px] leading-none font-normal tracking-normal text-white capitalize sm:top-8 sm:left-8 sm:text-[56px] lg:top-auto lg:bottom-[5%] lg:left-[8%] lg:text-[96px] lg:uppercase lg:whitespace-nowrap"
         >
           Services
         </p>
