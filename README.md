@@ -27,18 +27,18 @@ Marketing SPA for Nilsson: architecture, interior, and exterior design. Built as
 ### Prerequisites
 
 - Node.js 20+
-- npm or pnpm
+- [pnpm](https://pnpm.io/) 9 (see `packageManager` in `package.json`; Corepack: `corepack enable`)
 
 ### Install
 
 ```bash
-npm install
+pnpm install
 ```
 
 ### Development
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 Open the URL shown in the terminal (default Vite port).
@@ -46,23 +46,23 @@ Open the URL shown in the terminal (default Vite port).
 ### Production build
 
 ```bash
-npm run build
-npm run preview
+pnpm run build
+pnpm run preview
 ```
 
 ### Lint
 
 ```bash
-npm run lint
+pnpm run lint
 ```
 
 ### Test
 
 ```bash
-npm run test
+pnpm run test
 ```
 
-Watch mode: `npm run test:watch`
+Watch mode: `pnpm run test:watch`
 
 ## Project structure
 
@@ -96,7 +96,7 @@ When `prefers-reduced-motion: reduce` is set, Lenis is disabled and desktop uses
 
 ## CI
 
-GitHub Actions runs on push/PR to `main`: `npm ci` → `lint` → `test` → `build`.
+GitHub Actions runs on push/PR to `main`: `pnpm install --frozen-lockfile` → `lint` → `test` → `build`.
 
 ## Design tokens
 
