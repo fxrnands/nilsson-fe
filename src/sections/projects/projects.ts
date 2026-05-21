@@ -4,7 +4,7 @@ export const selectedProjects = [
   {
     title: 'The Escape',
     description:
-      'From crafting compelling brand identities to delivering innovative digital solutions, our meticulous art direction ensures cohesive experiences.',
+      'A serene villa retreat blending indoor comfort with outdoor living, designed around natural light, pool terraces, and restrained modern materials.',
     imageSrc: THE_ESCAPE_IMAGE,
     imageAlt: 'The Escape modern white villa with pool',
     href: '#the-escape',
@@ -12,7 +12,7 @@ export const selectedProjects = [
   {
     title: 'Eco Loft',
     description:
-      'From crafting compelling brand identities to delivering innovative digital solutions, our meticulous art direction ensures cohesive experiences.',
+      'A concrete loft framed by native landscaping and open courtyards, prioritizing thermal comfort, passive shading, and honest structural expression.',
     imageSrc: ECO_LOFT_IMAGE,
     imageAlt: 'Eco Loft concrete home with outdoor lounge',
     href: '#eco-loft',
