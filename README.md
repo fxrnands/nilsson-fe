@@ -10,7 +10,8 @@ Marketing SPA for Nilsson: architecture, interior, and exterior design. Built as
 | Build | Vite 8 |
 | Language | TypeScript (strict) |
 | Styling | Tailwind CSS v4 (`@tailwindcss/vite`) |
-| Smooth scroll | Lenis (horizontal on desktop) |
+| Smooth scroll | Lenis on desktop; native overflow when `prefers-reduced-motion` |
+| Tests | Vitest + Testing Library |
 
 ## Features
 
@@ -55,6 +56,14 @@ npm run preview
 npm run lint
 ```
 
+### Test
+
+```bash
+npm run test
+```
+
+Watch mode: `npm run test:watch`
+
 ## Project structure
 
 ```
@@ -62,8 +71,9 @@ src/
 ├── components/
 │   ├── layout/     # PageScroll, HorizontalScroll, ScrollPanel
 │   └── ui/         # Shared primitives (panels, separators, gradients)
-├── hooks/          # useMediaQuery
-├── lib/            # constants (images, radius tokens)
+├── hooks/          # useMediaQuery, usePrefersReducedMotion
+├── lib/            # constants, shared media queries
+├── test/           # Vitest setup
 └── sections/
     ├── hero/
     ├── intro/
@@ -82,7 +92,11 @@ Path alias: `@/` → `src/`.
 | `< 1024px` | Vertical | Single column; section-specific mobile patterns (text above image, no overlay panels where design specifies) |
 | `≥ 1024px` | Horizontal (Lenis) | Full-viewport panels; `100vw` sections; services grouped in one track |
 
-`prefers-reduced-motion` is respected via global CSS where applicable.
+When `prefers-reduced-motion: reduce` is set, Lenis is disabled and desktop uses native horizontal scrolling with `scroll-behavior: auto`.
+
+## CI
+
+GitHub Actions runs on push/PR to `main`: `npm ci` → `lint` → `test` → `build`.
 
 ## Design tokens
 
