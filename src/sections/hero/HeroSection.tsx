@@ -9,7 +9,7 @@ export function HeroSection() {
   return (
     <ScrollPanel className="bg-white lg:pr-hero-inset lg:pb-hero-inset" aria-label="Hero">
       <div className="flex flex-col lg:relative lg:h-full">
-        <div className="relative min-h-[78svh] w-full shrink-0 overflow-hidden sm:min-h-[82svh] lg:h-full lg:min-h-0">
+        <div className="relative aspect-square w-full shrink-0 overflow-hidden lg:aspect-auto lg:h-full lg:min-h-0">
           <img
             src={HERO_IMAGE}
             alt="Modern architecture exterior"
