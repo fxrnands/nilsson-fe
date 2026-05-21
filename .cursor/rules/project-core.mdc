@@ -9,7 +9,7 @@ alwaysApply: true
 
 - React 19 + Vite 8 + TypeScript (strict)
 - Tailwind CSS v4 via `@tailwindcss/vite`
-- Framer Motion 12 for UI motion
+- Lenis for desktop horizontal scroll (respect `prefers-reduced-motion`)
 
 ## Layout direction
 

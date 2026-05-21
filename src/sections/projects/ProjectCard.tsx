@@ -1,5 +1,7 @@
 import { WhitePanelBottomRight } from '@/components/ui/WhitePanelBottomRight'
 import { ImageBottomGradient } from '@/components/ui/ImageBottomGradient'
+import { ResponsiveImage } from '@/components/ui/ResponsiveImage'
+import { getProjectImage } from '@/lib/images'
 
 interface ProjectCardProps {
   title: string
@@ -37,7 +39,7 @@ function ExploreLink({ href, title, className = '' }: { href: string; title: str
       className={`inline-flex items-center gap-4 ${className}`.trim()}
       aria-label={`Explore ${title} project`}
     >
-      <span className="font-general text-[13px] font-medium leading-[1.3] tracking-[0.5px] text-neutral-950 uppercase">
+      <span className="font-general text-caption font-medium leading-[1.3] tracking-[0.5px] text-neutral-950 uppercase">
         Explore
       </span>
       <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-neutral-950">
@@ -48,25 +50,26 @@ function ExploreLink({ href, title, className = '' }: { href: string; title: str
 }
 
 export function ProjectCard({ title, description, imageSrc, imageAlt, href }: ProjectCardProps) {
+  const image = getProjectImage(imageSrc)
+
   return (
     <article className="flex w-full flex-col gap-6 lg:relative lg:h-full lg:gap-0 lg:overflow-hidden lg:rounded-tl-card lg:rounded-tr-card lg:rounded-bl-card lg:rounded-br-none">
       <div className="relative aspect-[3/2] h-auto w-full shrink-0 overflow-hidden rounded-2xl lg:absolute lg:inset-0 lg:aspect-auto lg:h-full lg:max-h-none lg:rounded-none">
-        <img
-          src={imageSrc}
+        <ResponsiveImage
+          {...image}
           alt={imageAlt}
           className="absolute inset-0 h-full w-full object-cover object-center"
-          draggable={false}
         />
 
         <ImageBottomGradient />
 
-        <h3 className="pointer-events-none absolute bottom-3 left-3 z-10 font-general text-[40px] leading-none font-normal tracking-[-1.5px] text-project-title capitalize sm:text-[48px] sm:tracking-[-2px] lg:bottom-8 lg:left-8 lg:text-[128px] lg:uppercase lg:whitespace-nowrap">
+        <h3 className="pointer-events-none absolute bottom-3 left-3 z-10 font-general text-project-mobile leading-none font-normal tracking-hero-tight text-project-title capitalize sm:text-project-sm sm:tracking-display lg:bottom-8 lg:left-8 lg:text-project-desktop lg:uppercase lg:whitespace-nowrap">
           {title}
         </h3>
       </div>
 
       <div className="flex flex-col items-start gap-6 lg:hidden">
-        <p className="font-satoshi text-[16px] font-normal leading-normal tracking-normal text-neutral-800">
+        <p className="font-satoshi text-body-sm font-normal leading-normal tracking-normal text-neutral-800">
           {description}
         </p>
         <ExploreLink href={href} title={title} />
@@ -75,7 +78,7 @@ export function ProjectCard({ title, description, imageSrc, imageAlt, href }: Pr
       <WhitePanelBottomRight className="box-border hidden lg:block lg:w-project-panel lg:max-w-[min(100%,696px)] lg:shrink-0">
         <div className="box-border px-[48px] pt-[32px] pb-4">
           <div className="max-w-project-panel-text">
-            <p className="font-satoshi text-[20px] font-normal leading-normal tracking-normal text-neutral-800">
+            <p className="font-satoshi text-body-lg font-normal leading-normal tracking-normal text-neutral-800">
               {description}
             </p>
 
@@ -84,7 +87,7 @@ export function ProjectCard({ title, description, imageSrc, imageAlt, href }: Pr
               className="mt-6 inline-flex items-center gap-4"
               aria-label={`View ${title} project`}
             >
-              <span className="font-general text-[13px] font-medium leading-[1.3] tracking-[0.5px] text-neutral-950 uppercase">
+              <span className="font-general text-caption font-medium leading-[1.3] tracking-[0.5px] text-neutral-950 uppercase">
                 View project
               </span>
               <span className="flex size-[36px] shrink-0 items-center justify-center rounded-full bg-neutral-950">

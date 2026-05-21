@@ -44,8 +44,8 @@ export function HeroNav() {
                 href={link.href}
                 className={
                   link.active
-                    ? 'rounded-md bg-neutral-100 p-3 font-general text-[13px] font-medium tracking-[0.5px] text-neutral-950 uppercase'
-                    : 'p-3 font-general text-[13px] font-medium tracking-[0.5px] text-neutral-950 uppercase transition-opacity hover:opacity-60'
+                    ? 'rounded-md bg-neutral-100 p-3 font-general text-caption font-medium tracking-[0.5px] text-neutral-950 uppercase'
+                    : 'p-3 font-general text-caption font-medium tracking-[0.5px] text-neutral-950 uppercase transition-opacity hover:opacity-60'
                 }
                 aria-current={link.active ? 'page' : undefined}
               >

@@ -1,10 +1,12 @@
 import { CardStickyCorners } from '@/components/ui/CardStickyCorner'
+import { ResponsiveImage } from '@/components/ui/ResponsiveImage'
+import type { ImageAsset } from '@/lib/images'
 
 interface ServiceOfferingCardProps {
   title: string
   description: string
   desktopDescription?: string
-  imageSrc: string
+  image: ImageAsset
   imageAlt: string
   panelAlign: 'right' | 'left'
 }
@@ -13,7 +15,7 @@ export function ServiceOfferingCard({
   title,
   description,
   desktopDescription,
-  imageSrc,
+  image,
   imageAlt,
   panelAlign,
 }: ServiceOfferingCardProps) {
@@ -27,10 +29,10 @@ export function ServiceOfferingCard({
   return (
     <article className="flex w-full flex-col gap-6 lg:relative lg:min-h-0 lg:flex-1 lg:gap-0 lg:overflow-hidden">
       <header className="flex flex-col items-start lg:hidden">
-        <h3 className="font-general text-[24px] font-medium leading-[1.2] tracking-normal text-neutral-950">
+        <h3 className="font-general text-title-md font-medium leading-[1.2] tracking-normal text-neutral-950">
           {title}
         </h3>
-        <p className="mt-2 font-satoshi text-[16px] font-normal leading-normal tracking-normal text-neutral-800">
+        <p className="mt-2 font-satoshi text-body-sm font-normal leading-normal tracking-normal text-neutral-800">
           {description}
         </p>
       </header>
@@ -38,11 +40,10 @@ export function ServiceOfferingCard({
       <div
         className={`relative aspect-[3/2] w-full max-h-[min(48svh,400px)] shrink-0 overflow-hidden sm:max-h-[min(52svh,440px)] lg:absolute lg:inset-0 lg:aspect-auto lg:max-h-none ${imageRadiusClass}`}
       >
-        <img
-          src={imageSrc}
+        <ResponsiveImage
+          {...image}
           alt={imageAlt}
           className="absolute inset-0 h-full w-full object-cover object-center"
-          draggable={false}
         />
 
         <div
@@ -53,10 +54,10 @@ export function ServiceOfferingCard({
           }
         >
           <div className={isPanelRight ? 'pt-6 pr-6 pb-4 pl-6' : 'pt-4 pr-8 pb-4 pl-4'}>
-            <h3 className="font-general text-[24px] font-medium leading-[1.2] tracking-normal text-neutral-950">
+            <h3 className="font-general text-title-md font-medium leading-[1.2] tracking-normal text-neutral-950">
               {title}
             </h3>
-            <p className="mt-1 font-satoshi text-[16px] font-normal leading-normal tracking-normal text-neutral-800">
+            <p className="mt-1 font-satoshi text-body-sm font-normal leading-normal tracking-normal text-neutral-800">
               {panelDescription}
             </p>
           </div>

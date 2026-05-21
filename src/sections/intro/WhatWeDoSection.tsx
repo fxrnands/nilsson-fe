@@ -21,14 +21,14 @@ export function WhatWeDoSection() {
 
         <h2
           id="what-we-do-heading"
-          className="mt-6 max-w-[520px] font-general text-[32px] leading-[1.2] font-medium tracking-normal text-neutral-950 sm:text-[40px] lg:mt-8 lg:text-[48px]"
+          className="mt-6 max-w-[520px] font-general text-section-mobile leading-[1.2] font-medium tracking-normal text-neutral-950 sm:text-section-sm lg:mt-8 lg:text-section"
         >
           Shaping Future
           <br />
           Architecture
         </h2>
 
-        <p className="mt-4 max-w-[600px] font-satoshi text-[18px] font-normal leading-normal tracking-normal text-neutral-800 lg:mt-6 lg:text-[20px]">
+        <p className="mt-4 max-w-[600px] font-satoshi text-body font-normal leading-normal tracking-normal text-neutral-800 lg:mt-6 lg:text-body-lg">
           At Nilsson, we blend creativity and eco-consciousness to reshape modern living.
           With a passion for sustainable design, we craft functional and aesthetically
           pleasing environments that stand the test of time while minimizing our ecological
@@ -50,6 +50,7 @@ export function WhatWeDoSection() {
               height={logo.height}
               className="max-h-[48px] w-auto object-contain lg:max-h-[60px]"
               loading="lazy"
+              decoding="async"
             />
           </li>
         ))}

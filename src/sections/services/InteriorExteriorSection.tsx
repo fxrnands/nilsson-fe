@@ -1,4 +1,4 @@
-import { EXTERIOR_IMAGE, INTERIOR_IMAGE } from '@/lib/constants'
+import { exteriorImage, interiorImage } from '@/lib/images'
 import { SectionSeparator } from '@/components/ui/SectionSeparator'
 import { ServiceOfferingCard } from '@/sections/services/ServiceOfferingCard'
 
@@ -14,7 +14,7 @@ export function InteriorExteriorSection() {
             title="Interior Design"
             description="We create interiors that reflect your personality while embracing nature's beauty."
             desktopDescription="Infusing your spaces with elegance and sustainability, we create interiors that reflect your personality while embracing nature's beauty."
-            imageSrc={INTERIOR_IMAGE}
+            image={interiorImage}
             imageAlt="Modern sunlit living room interior"
             panelAlign="right"
           />
@@ -23,7 +23,7 @@ export function InteriorExteriorSection() {
             title="Exterior Design"
             description="Elevate curb appeal with exterior designs that harmonize contemporary style with environmentally conscious landscaping."
             desktopDescription="Elevate curb appeal and functionality with our exterior designs that harmonize contemporary style with environmentally conscious landscaping solutions."
-            imageSrc={EXTERIOR_IMAGE}
+            image={exteriorImage}
             imageAlt="Modern home with pool and landscaped exterior"
             panelAlign="left"
           />

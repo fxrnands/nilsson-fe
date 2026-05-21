@@ -13,14 +13,14 @@ export function SelectedWorkIntroSection() {
         <div className="flex flex-col items-start">
           <h2
             id="selected-work-heading"
-            className="max-w-[520px] font-general text-[32px] leading-[1.2] font-medium tracking-normal text-neutral-950 sm:text-[40px] lg:text-[48px]"
+            className="max-w-[520px] font-general text-section-mobile leading-[1.2] font-medium tracking-normal text-neutral-950 sm:text-section-sm lg:text-section"
           >
             Eco-Friendly
             <br />
             Masterpieces
           </h2>
 
-          <p className="mt-4 max-w-[700px] font-satoshi text-[18px] font-normal leading-normal tracking-normal text-neutral-800 lg:text-[20px]">
+          <p className="mt-4 max-w-[700px] font-satoshi text-body font-normal leading-normal tracking-normal text-neutral-800 lg:text-body-lg">
             Explore a curated collection of Nilsson&apos;s remarkable projects that epitomize our
             dedication to modern, sustainable design. Each creation is a testament to our commitment
             to merging aesthetics with environmental consciousness, delivering spaces that inspire
