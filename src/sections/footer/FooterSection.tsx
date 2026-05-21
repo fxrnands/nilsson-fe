@@ -19,17 +19,17 @@ export function FooterSection() {
         <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
           <h2
             id="footer-cta-heading"
-            className="font-general text-[48px] leading-none font-normal tracking-[-2px] uppercase sm:text-[64px] lg:text-[128px]"
+            className="font-general text-[44px] leading-none font-normal tracking-[-2px] capitalize lg:text-[128px] lg:uppercase"
           >
-            Shape your
-            <br />
+            Shape your{' '}
+            <br className='hidden md:block' /> 
             dream space!
           </h2>
           <a
             href="/"
-            className="mt-8 inline-flex h-[60px] w-full max-w-[280px] items-center justify-center rounded-full bg-white transition-opacity hover:opacity-90 lg:mt-8 lg:h-footer-cta-button lg:w-footer-cta-button lg:max-w-none lg:rounded-footer-cta"
+            className="mt-8 inline-flex h-[47px] w-[151px] items-center justify-center rounded-[8px] bg-white transition-opacity hover:opacity-90 lg:mt-8 lg:h-footer-cta-button lg:w-footer-cta-button lg:rounded-footer-cta"
           >
-            <span className="font-general text-[20px] font-medium leading-[1.3] tracking-[0.5px] text-ink uppercase lg:text-[24px]">
+            <span className="font-general text-[13px] font-medium leading-[1.3] tracking-[0.5px] text-ink capitalize lg:text-[24px] lg:uppercase">
               Let&apos;s connect
             </span>
           </a>
@@ -41,9 +41,11 @@ export function FooterSection() {
             <FooterNavColumn title="Pages" links={footerPagesLinks}>
               <a
                 href="/"
-                className="mt-6 inline-flex h-10 items-center justify-center rounded-full bg-white px-6 font-general text-[13px] font-medium leading-[1.3] tracking-[0.5px] text-ink uppercase transition-opacity hover:opacity-90 lg:rounded-lg"
+                className="mt-6 inline-flex h-[47px] min-w-[151px] items-center justify-center rounded-[8px] bg-white px-4 transition-opacity hover:opacity-90 lg:h-10 lg:min-w-0 lg:w-auto lg:rounded-lg lg:px-6"
               >
-                More templates
+                <span className="font-general text-[13px] font-medium leading-[1.3] tracking-[0.5px] text-ink capitalize lg:uppercase">
+                  More templates
+                </span>
               </a>
             </FooterNavColumn>
             <FooterNavColumn title="CMS" links={footerCmsLinks} />
