@@ -6,7 +6,7 @@ const partnerLogos = [
   { src: '/icons/creative-studio.svg', alt: 'Creative Studio', width: 69, height: 60 },
   { src: '/icons/in-motion.svg', alt: 'In Motion', width: 68, height: 60 },
   { src: '/icons/abstract.svg', alt: 'Abstract', width: 73, height: 60 },
-  { src: '/icons/visioin-studio.svg', alt: 'Vision Studio', width: 112, height: 32 },
+  { src: '/icons/vision-studio.svg', alt: 'Vision Studio', width: 112, height: 32 },
   { src: '/icons/invision.svg', alt: 'Invision', width: 64, height: 60 },
 ] as const
 
