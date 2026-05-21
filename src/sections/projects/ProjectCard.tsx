@@ -60,7 +60,7 @@ export function ProjectCard({ title, description, imageSrc, imageAlt, href }: Pr
 
         <ImageBottomGradient />
 
-        <h3 className="pointer-events-none absolute bottom-6 left-6 z-10 font-general text-[40px] leading-none font-normal tracking-[-1.5px] text-project-title uppercase sm:bottom-8 sm:left-8 sm:text-[48px] sm:tracking-[-2px] lg:text-[128px] lg:whitespace-nowrap">
+        <h3 className="pointer-events-none absolute bottom-3 left-3 z-10 font-general text-[40px] leading-none font-normal tracking-[-1.5px] text-project-title capitalize sm:text-[48px] sm:tracking-[-2px] lg:bottom-8 lg:left-8 lg:text-[128px] lg:uppercase lg:whitespace-nowrap">
           {title}
         </h3>
       </div>
